@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_products",
+  "info": {
+    "singularName": "top-product",
+    "pluralName": "top-products",
+    "displayName": "TopProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 81,
+      "minLength": 5
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "t-shirts",
+        "mug",
+        "hoodie",
+        "stickers",
+        "sports",
+        "furniture",
+        "cosmetics",
+        "toys",
+        "clothes",
+        "electronics",
+        "fashion"
+      ],
+      "default": "t-shirts"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "gray",
+        "amber",
+        "green",
+        "pink",
+        "blue",
+        "yellow"
+      ]
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "availableQTY": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
